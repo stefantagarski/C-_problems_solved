@@ -1,1 +1,1 @@
-# C++_problems_solved
+Solved problems for Object Oriented Programming ( C++ language)
