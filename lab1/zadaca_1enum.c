@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+enum TransactionType {
+    debitna = 0,
+    kreditna = 1
+};
+
+struct Transaction {
+    int id;
+    int sum;
+    int provision;
+    enum TransactionType type;
+};
+
+typedef struct Transaction transaction;
+
+int main() {
+    int n;
+    transaction f;
+    int flag = 0;
+
+    scanf("%d", &n);
+    for (int i = 0; i < n; ++i) {
+        scanf("%d %d %d %d", &f.id, &f.sum, &f.provision, (int*) &f.type);
+        if (f.type == kreditna) {
+            printf("%d %d \n", f.id, f.sum + f.provision);
+            flag = 1;
+        }
+    }
+
+    if (flag == 0) {
+        printf("No credit card transaction");
+    }
+
+    return 0;
+}
