@@ -91,16 +91,16 @@ public:
         }
     }
 
-   void izbrishi(const OperativenSistem &operativenSistem)
+    void izbrishi(const OperativenSistem &operativenSistem)
     {
         int flag=0;
-        int br=0;
+        //int br=0;
         for(int i=0;i<n;i++)
         {
             if(niza[i].ednakviSe(operativenSistem))
             {
                 flag=1;
-                br++;
+                //br++;
             }
         }
         if(flag==0)
@@ -108,7 +108,7 @@ public:
             return;
         }
 
-        OperativenSistem *tmp=new OperativenSistem[n-br];
+        OperativenSistem *tmp=new OperativenSistem[n-1]; //[n-br];
         int j=0;
         for(int i=0;i<n;i++)
         {
@@ -118,9 +118,10 @@ public:
                 j++;
             }
         }
+        n--; // [n -= br];
         delete[]niza;
         niza=tmp;
-        n-=br;
+        
 
     }
 
