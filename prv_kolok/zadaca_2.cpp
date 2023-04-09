@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
-
+int uspesni = 0, neuspesni = 0;
 class List {
 private:
     int *numbers;
     int count;
+
 public:
 
     explicit List(const int *numbers= nullptr, int count=0) {
@@ -56,10 +57,12 @@ public:
     void pecati() {
         int s = sum();
         double avg = average();
-        cout << "List info: " << count<<" :";
+        cout << "List info: " << count<<": ";
         for (int i = 0; i < count; i++)
             cout << numbers[i] << " ";
         cout << "sum: " << s << " average: " << avg << endl;
+
+
     }
 
     int getNumElements() const{
@@ -109,10 +112,13 @@ public:
         for (int i = 0; i < numElements; ++i) {
             if(lists[i].sum() == l.sum()){
                 flag = 0;
+                neuspesni++;
                 break;
             }
         }
+
         if(flag == 1){
+            uspesni++;
             List *newlist = new List[numElements + 1];
             for (int i = 0; i < numElements; ++i) {
                 newlist[i] = lists[i];
@@ -154,6 +160,7 @@ public:
                 lists[i].pecati();
             }
             cout << "Sum: " << totalSum << " Average: " << totalAvg << endl;
+            cout<<"Successful attempts: "<<uspesni<<" Failed attempts: "<<neuspesni<<endl;
         }
     }
 
@@ -200,5 +207,5 @@ int main() {
     else {
         lc.print();
     }
-    cout<<"Successful attempts: "<<" "<<"Failed attempts: "<<" "<<endl;
+
 }
