@@ -37,12 +37,14 @@ void najeftina_ponuda(ITStore niza[], int n) {
                 index = i;
             }
         }
+        printf("Najeftina ponuda ima prodavnicata:\n%s %s\n",niza[index].store_name,niza[index].location);
+        printf("Najniskata cena iznesuva: %d\n",minPrice);
     }
-    if (index != -1) {
-        ITStore cheapest_store = niza[index];
-        printf("Najeftina ponuda ima prodavnicata:\n%s %s\n", cheapest_store.store_name, cheapest_store.location);
-        printf("Najniskata cena iznesuva: %d\n", minPrice);
-    }
+//    if (index != -1) {
+//        ITStore cheapest_store = niza[index];
+//        printf("Najeftina ponuda ima prodavnicata:\n%s %s\n", cheapest_store.store_name, cheapest_store.location);
+//        printf("Najniskata cena iznesuva: %d\n", minPrice);
+//    }
 }
 
 int main() {
