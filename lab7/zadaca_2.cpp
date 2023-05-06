@@ -123,14 +123,7 @@ public:
         cout<<"Experience: "<<experience<<endl;
     }
 };
-// YOUR CODE STARTS HERE
 
-
-//DO NOT EDIT THE MAIN FUNCTION
-#include <iostream>
-#include <cstring>
-
-using namespace std;
 
 // YOUR CODE STARTS HERE
 
