@@ -1,1 +1,1 @@
-Solved problems for Object Oriented Programming (C++ language) at FCSE - Skopje 
+Solved problems for Object Oriented Programming (using C++ ) at FCSE - Skopje 
